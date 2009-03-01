@@ -5,7 +5,6 @@
 shrunken gene matrix obtained from RDA cross-validation analysis.
 }
 
-}
 \usage{
 plot.rdacv(x, type=c("both", "error", "gene"), nice=FALSE, ...)
 }
