@@ -43,14 +43,14 @@ rda.plotmat <- function(mat, main='', len=5, ncolor=100, se=TRUE,
     jump.alpha <- (max(alpha)-min(alpha))/(len-1)
     jump.delta <- (max(delta)-min(delta))/(len-1)
   
-    layout(matrix(c(1, 2, 1, 3), 2, 2), height=c(8, 2), width=c(3, 7))
+    layout(matrix(c(1, 2, 1, 3), 2, 2), heights=c(8, 2), widths=c(3, 7))
     image(delta, alpha, t(mat[rev(seq(a)), ]), yaxt='n',
           ylim=c(min(alpha)-jump.alpha*0.1, max(alpha)+jump.alpha*0.1),
           xlab=expression(paste(Delta)),
           ylab=expression(paste(alpha)),
           main=main, col=terrain.colors(ncolor))
     alpha.lab <- round(seq(min(alpha), max(alpha), len=len), 3)
-    axis(2, at=alpha.lab, label=rev(alpha.lab), line=1)
+    axis(2, at=alpha.lab, labels=rev(alpha.lab), line=1)
 
     if(se){
       if(is.null(nrow(pos))) {

@@ -97,5 +97,3 @@ folds[[5]] <- index[43:52]
 folds[[6]] <- index[53:62]
 fit.cv <- rda.cv(fit, colon.x, colon.y, folds=folds)
 }
-\keyword{}
-

@@ -6,7 +6,7 @@ shrunken gene matrix obtained from RDA cross-validation analysis.
 }
 
 \usage{
-plot.rdacv(x, type=c("both", "error", "gene"), nice=FALSE, ...)
+\method{plot}{rdacv}(x, type=c("both", "error", "gene"), nice=FALSE, ...)
 }
 
 \arguments{
@@ -57,5 +57,3 @@ fit <- rda(t(colon.x), colon.y)
 fit.cv <- rda.cv(fit, x=t(colon.x), y=colon.y)
 plot.rdacv(fit.cv)
 }
-
-\keyword{}

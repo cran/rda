@@ -5,7 +5,7 @@
 A function that predicts the class labels for new samples using RDA.
 }
 \usage{
-predict.rda(object, x, y, xnew, prior, alpha, delta,
+\method{predict}{rda}(object, x, y, xnew, prior, alpha, delta,
             type=c("class", "posterior", "nonzero"),
             trace=FALSE, ...)
 }
@@ -93,6 +93,3 @@ ynew <- predict(fit, x=colon.x[, tr.index], y=colon.y[tr.index],
 ## calculate the prediction error
 sum(ynew != colon.y[-tr.index])
 }
-
-\keyword{}
-

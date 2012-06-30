@@ -51,7 +51,3 @@ data(colon)
 colon.x <- t(colon.x)
 genenames <- genelist.rda(colon.x, colon.y, alpha=0.1, delta=0.3)
 }
-
-\keyword{}
-
-

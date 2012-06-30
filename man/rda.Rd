@@ -103,8 +103,3 @@ data(colon)
 colon.x <- t(colon.x)
 fit <- rda(colon.x, colon.y)
 }
-
-\keyword{}
-
-
-
