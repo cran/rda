@@ -1,6 +1,6 @@
-7f025032989320bef76d095e6aedb939 *DESCRIPTION
+2a1d3c1ed3cac2196abc5a33b27b7639 *DESCRIPTION
 61ebf1914538b6254a39f161f286069f *INDEX
-2e99362a255f1fa89da204d5607c1e8a *NAMESPACE
+63d89739955fd7c7e2463bb9b8ad087c *NAMESPACE
 bb8590ce1b9dc15b42c525b8be97a5f4 *R/Drda1.R
 1e6e07bc792443fe556c47a670320f5f *R/balanced.folds.R
 1110b77a1cd5a58e979bfd3273bec2ff *R/permute.rows.R
@@ -14,8 +14,8 @@ b01091ebb93f335e354dcb0a6b8f18e0 *R/rda.plotcv.R
 c7fa9251ebecca05c4e48d8cb43da4d5 *R/rda.predict.R
 cd0a21cd4d72d781a407f08c57f87bd5 *R/rda1.R
 210d279ab01fbe8d88c771be3cef4fc5 *R/softmax.R
-ac27d39c40e4e6ad655594fbe86291df *data/brain.rda
-05f11ce365b3aa2db691a3119c6dcffd *data/colon.rda
+6e41286fd699afcdf8d037aa3671e908 *data/brain.rda
+7cd51683f738f35c90b72e94bfab54a5 *data/colon.rda
 6eefb1846ea1e99b23b1686375ef1e47 *data/datalist
 2e93d48d63735e2a9e68e07a250c8965 *man/brain.Rd
 1c6b192ae158f2ae144e1da86de842c4 *man/brain.x.Rd
