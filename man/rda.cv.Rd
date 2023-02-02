@@ -70,30 +70,35 @@ the average result from cross-validation.}
   \item{n}{The sample size of the training data set.}
 }
 \references{
-Guo, Y. et al. (2004) \emph{Regularized Discriminant Analysis and Its
-Application in Microarrays}, Technical Report, Department of Statistics,
-Stanford University.
+    Y. Guo, T. Hastie, R. Tibshirani, (2006).
+    Regularized linear discriminant analysis and its application in microarrays, 
+    \emph{Biostatistics} \bold{8} pp. 86--100.
+    \doi{10.1093/biostatistics/kxj035}.
 }
 \author{Yaqian Guo, Trevor Hastie and Robert Tibshirani}
 \seealso{
 Also see \code{\link{rda}} and \code{\link{predict.rda}}.
 }
 \examples{
-data(colon)
-colon.x <- t(colon.x)
-fit <- rda(colon.x, colon.y)
-fit.cv <- rda.cv(fit, x=colon.x, y=colon.y)
 
-## to use the customized folds in cross-validation,
-## for example, 6-fold with 11, 11, 10, 10, 10, 10 samples 
-## in the respective folds, you can do the follows:
-index <- sample(1:62, 62)
-folds <- list()
-folds[[1]] <- index[1:11]
-folds[[2]] <- index[12:22]
-folds[[3]] <- index[23:32]
-folds[[4]] <- index[33:42]
-folds[[5]] <- index[43:52]
-folds[[6]] <- index[53:62]
-fit.cv <- rda.cv(fit, colon.x, colon.y, folds=folds)
+## These examples will take too long and R CMD check will complain ...
+\donttest{
+    data(colon)
+    colon.x <- t(colon.x)
+    fit <- rda(colon.x, colon.y)
+    fit.cv <- rda.cv(fit, x=colon.x, y=colon.y)
+    
+    ## to use the customized folds in cross-validation,
+    ## for example, 6-fold with 11, 11, 10, 10, 10, 10 samples 
+    ## in the respective folds, you can do the follows:
+    index <- sample(1:62, 62)
+    folds <- list()
+    folds[[1]] <- index[1:11]
+    folds[[2]] <- index[12:22]
+    folds[[3]] <- index[23:32]
+    folds[[4]] <- index[33:42]
+    folds[[5]] <- index[43:52]
+    folds[[6]] <- index[53:62]
+    fit.cv <- rda.cv(fit, colon.x, colon.y, folds=folds)
+}
 }

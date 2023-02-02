@@ -1,7 +1,7 @@
-plot.rdacv <- function(x, type=c("both", "error", "gene"), 
+plot.rdacv <- function(x, type=c("both", "error", "gene"),
                        nice=FALSE, ...){
 
-  if(class(x) != 'rdacv') {
+  if(!is(x, "rdacv")) {
     stop("You must supply a cross-validation object.")
   }
   else{
@@ -11,14 +11,15 @@ plot.rdacv <- function(x, type=c("both", "error", "gene"),
     minpos <- which(x$cv.err == min(x$cv.err), TRUE)
 
     type <- match.arg(type)
-    switch(type, 
+    switch(type,
     both={
       tmperr <- x$cv.err
       dimnames(tmperr) <- list(x$alpha, x$delta)
       tmpgene <- x$ngene
       dimnames(tmpgene) <- list(x$alpha, x$delta)
 
-      par(ask=TRUE)
+      oldpar <- par(ask=TRUE)
+      on.exit(par(oldpar))
       rda.plotmat(tmperr, se=TRUE,
                   main=paste("Heatmap of ", x$nfold,
                              "-fold CV Error"),
@@ -47,4 +48,3 @@ plot.rdacv <- function(x, type=c("both", "error", "gene"),
     })
   }
 }
-
